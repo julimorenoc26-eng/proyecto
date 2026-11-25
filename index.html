@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Nacional por el Turismo Social</title>
+    <link rel="icon" type="image/jpeg" href="img/logofundacion1.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN POR PESTAÑAS -->
+    <nav class="navbar" aria-label="Navegación por pestañas">
+        <div class="navbar-container">
+            <div class="navbar-inner">
+
+                <!-- Pestañas en escritorio -->
+                <div class="navbar-links" role="tablist">
+                    <button type="button" role="tab" class="navbar-link active" data-tab="inicio" aria-selected="true">Inicio</button>
+                    <button type="button" role="tab" class="navbar-link" data-tab="identidad" aria-selected="false">Identidad</button>
+                    <button type="button" role="tab" class="navbar-link" data-tab="diagnostico" aria-selected="false">Diagnóstico e Inventario</button>
+
+                    <div class="navbar-escalera" role="group" aria-label="Sesión Didáctica 1">
+                        <button
+                            type="button"
+                            class="navbar-link dropdown-trigger"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="menu-habilidades-escalera"
+                        >
+                            Sesión Didáctica 1 <span class="dropdown-caret" aria-hidden="true">▾</span>
+                        </button>
+
+                        <div id="menu-habilidades-escalera" class="dropdown-menu-habilidades">
+                            <button
+                                type="button"
+                                role="tab"
+                                class="dropdown-item escalon-1"
+                                data-tab="habilidades-tecnicas"
+                                aria-selected="false"
+                            >
+                                A. Hab. Técnicas
+                            </button>
+                            <button
+                                type="button"
+                                role="tab"
+                                class="dropdown-item escalon-2"
+                                data-tab="habilidades-blandas"
+                                aria-selected="false"
+                            >
+                                B. Hab. Blandas
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="button" role="tab" class="navbar-link" data-tab="clasificacion" aria-selected="false">1. Clasificación</button>
+                    <button type="button" role="tab" class="navbar-link" data-tab="sla" aria-selected="false">2. SLA</button>
+                    <button type="button" role="tab" class="navbar-link" data-tab="metricas" aria-selected="false">3. Estadísticas</button>
+                    <button type="button" role="tab" class="navbar-link" data-tab="marco" aria-selected="false">4. Marco y Drive</button>
+                </div>
+
+                <!-- Botón hamburguesa en móvil -->
+                <button
+                    type="button"
+                    id="menu-toggle"
+                    class="menu-toggle"
+                    aria-label="Abrir menú de pestañas"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                >
+                    <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú desplegable en móvil -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-list">
+                <button type="button" class="mobile-menu-link active" data-tab="inicio">Inicio (Portada)</button>
+                <button type="button" class="mobile-menu-link" data-tab="identidad">Identidad Institucional</button>
+                <button type="button" class="mobile-menu-link" data-tab="diagnostico">Diagnóstico e Inventario</button>
+                <div class="mobile-menu-escalera">
+                    <button type="button" class="mobile-menu-link escalon-1" data-tab="habilidades-tecnicas">
+                        Parte I · A. Habilidades Técnicas
+                    </button>
+                    <button type="button" class="mobile-menu-link escalon-2" data-tab="habilidades-blandas">
+                        ↳ B. Habilidades Blandas
+                    </button>
+                </div>
+                <button type="button" class="mobile-menu-link" data-tab="clasificacion">1. Clasificación Soporte</button>
+                <button type="button" class="mobile-menu-link" data-tab="sla">2. SLA por Categoría</button>
+                <button type="button" class="mobile-menu-link" data-tab="metricas">3. Estadísticas</button>
+                <button type="button" class="mobile-menu-link" data-tab="marco">4. Marco Teórico y Drive</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 0: INICIO (SOLO LO ESENCIAL)                      -->
+        <!-- ========================================================= -->
+        <section id="tab-inicio" class="tab-panel active" role="tabpanel">
+            <header class="hero hero-home">
+                <div style="margin-bottom: 1.25rem;">
+                    <img
+                        src="img/logofundacion1.jpg"
+                        alt="Logo de la Fundación Nacional por el Turismo Social"
+                        style="max-width: 300px; width: 100%; height: auto; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);"
+                    >
+                </div>
+                <h1 class="hero-title">Fundación Nacional por el Turismo Social en Venezuela</h1>
+                <p class="hero-subtitle"><em>"Recreación accesible que conecta regiones y fortalece nuestra gente."</em></p>
+            </header>
+
+            <!-- Resumen Ejecutivo + Accesos Rápidos por Pestaña -->
+            <div class="grid-marco" style="margin-top: 2rem;">
+                <div class="marco-card marco-card-blue">
+                    <h3 class="marco-card-title">🏛️ La Institución</h3>
+                    <p class="marco-card-text">Organismo público dedicado a planes vacacionales y recreacionales para estudiantes y trabajadores en 4 sedes nacionales</p>
+                    <button type="button" class="quick-tab-btn" data-tab="identidad">Ver Identidad y Organigrama →</button>
+                </div>
+
+                <div class="marco-card marco-card-emerald">
+                    <h3 class="marco-card-title">🔍 Situación y Competencias</h3>
+                    <p class="marco-card-text">Diagnóstico de 40 estaciones de trabajo, propuesta de mesa de ayuda GLPI y matriz de habilidades técnicas y blandas</p>
+                    <button type="button" class="quick-tab-btn" data-tab="habilidades-tecnicas">Explorar Habilidades →</button>
+                </div>
+
+                <div class="marco-card marco-card-purple">
+                    <h3 class="marco-card-title">🛠️ Gestión del Servicio TI</h3>
+                    <p class="marco-card-text">Clasificación de incidentes y problemas, acuerdos de nivel de servicio (SLA), indicadores de continuidad y marco teórico ITIL 4 / COBIT / ISO.</p>
+                    <button type="button" class="quick-tab-btn" data-tab="sla">Ver SLA y Estadísticas →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 1: IDENTIDAD INSTITUCIONAL                        -->
+        <!-- ========================================================= -->
+        <section id="tab-identidad" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="section-title">🏛️ Identidad Institucional de la Fundación</h2>
+
+            <div class="grid-marco">
+                <div class="marco-card marco-card-blue">
+                    <h3 class="marco-card-title">Misión</h3>
+                    <p class="marco-card-text">Promover, planificar y ejecutar planes vacacionales y recreacionales accesibles y de calidad para estudiantes de educación básica y universitaria, así como para trabajadores y trabajadoras de organismos públicos en Venezuela, impulsando el turismo interno y el aprovechamiento sostenible de los recursos y servicios de cada región.</p>
+                </div>
+                <div class="marco-card marco-card-emerald">
+                    <h3 class="marco-card-title">Visión</h3>
+                    <p class="marco-card-text">Consolidarse como la institución referente en turismo social en Venezuela, reconocida por su cobertura nacional, eficiencia operativa y respaldo tecnológico moderno, garantizando experiencias recreativas inclusivas que impulsen el bienestar social y el desarrollo turístico regional.</p>
+                </div>
+                <div class="marco-card marco-card-purple">
+                    <h3 class="marco-card-title">Valores Institucionales</h3>
+                    <ul class="marco-card-text">
+                        <li><strong>Inclusión y equidad.</strong></li>
+                        <li><strong>Compromiso y servicio.</strong></li>
+                        <li><strong>Transparencia y responsabilidad.</strong></li>
+                        <li><strong>Integración regional.</strong></li>
+                        <li><strong>Innovación y mejora continua.</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sedes y Ubicación Geográfica -->
+            <div class="panel-card" style="margin-top: 1.5rem;">
+                <h3 class="panel-title">📍 Sede Principal y Sucursales</h3>
+                <ul class="kpi-list">
+                    <li class="kpi-item">
+                        <span><strong>Sede Principal: Caracas, Distrito Capital (Av. Principal Los Chaguaramos, Edificio Centro Institucional Sol)</strong></span>
+                        <span class="kpi-target-ok">18 Equipos</span>
+                    </li>
+                    <li class="kpi-item">
+                        <span><strong>Sucursal 1: Región Oriental / Barcelona, Estado Anzoátegui (Av. Intercomunal, Centro Empresarial Oriente, Local 12)</strong></span>
+                        <span class="kpi-target-ok">8 Equipos</span>
+                    </li>
+                    <li class="kpi-item">
+                        <span><strong>Sucursal 2: Región Centro-Occidental / Barquisimeto, Estado Lara (Av. Los Leones, Torre Empresarial Crepuscular, Piso 3)</strong></span>
+                        <span class="kpi-target-ok">7 Equipos</span>
+                    </li>
+                    <li class="kpi-item">
+                        <span><strong>Sucursal 3: Región Sur / Los Llanos / Calabozo, Estado Guárico (Av. Octavio Viana, Edificio Comercial El Llano, Planta Baja)</strong></span>
+                        <span class="kpi-target-ok">7 Equipos</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Organigrama en Imagen -->
+            <div class="panel-card" style="margin-top: 1.5rem;">
+                <h3 class="panel-title">🗂️ Organigrama Institucional</h3>
+                <figure style="margin: 0; text-align: center;">
+                    <img
+                        src="img/organigramafundacion.jpeg"
+                        alt="Organigrama Institucional de la Fundación Nacional por el Turismo Social"
+                        style="width: 100%; max-width: 100%; height: auto; border-radius: 0.5rem; border: 1px solid #cbd5e1;"
+                    >
+                </figure>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 2: DIAGNÓSTICO E INVENTARIO                       -->
+        <!-- ========================================================= -->
+        <section id="tab-diagnostico" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="section-title">🔍 Diagnóstico Tecnológico Actual (40 Equipos)</h2>
+
+            <div class="grid-marco" style="margin-bottom: 1.5rem;">
+                <div class="marco-card marco-card-blue">
+                    <h4 class="marco-card-title">Software de Atención de Fallas</h4>
+                    <p class="marco-card-text"><strong>Situación actual:</strong> Inexistente; las solicitudes se reciben por llamadas telefónicas sin registro ni trazabilidad.<br><strong>Propuesta:</strong> Implementación de <strong>GLPI</strong> (software libre) para mesa de ayuda, tickets e inventario.</p>
+                </div>
+                <div class="marco-card marco-card-emerald">
+                    <h4 class="marco-card-title">Esquema de Atención al Usuario</h4>
+                    <ul class="marco-card-text">
+                        <li><strong>1) Recepción y registro en GLPI</strong></li>
+                        <li><strong>2) Clasificación por impacto/urgencia.</strong></li>
+                        <li><strong>3) Atención Nivel 1 (Técnico: remoto/presencial).</strong></li>
+                        <li><strong>4) Escalamiento Nivel 2 (Ing. Sistemas).</strong></li>
+                        <li><strong>5) Cierre y encuesta de conformidad.</strong></li>
+                    </ul>
+                </div>
+                <div class="marco-card marco-card-purple">
+                    <h4 class="marco-card-title">Cumplimiento de Normas de Atención</h4>
+                    <p class="marco-card-text">Aplicación de trato empático (cero culpas), comunicación en lenguaje claro sin tecnicismos, prohibición de instalaciones sin autorización y acta obligatoria de traslado de equipos.</p>
+                </div>
+            </div>
+
+            <!-- Resumen visual de métricas del inventario -->
+            <div class="inv-summary-bar">
+                <div class="inv-stat-chip inv-stat-total">
+                    <span class="inv-stat-num">40</span>
+                    <span class="inv-stat-label">Total Equipos</span>
+                </div>
+                <div class="inv-stat-chip inv-stat-critico">
+                    <span class="inv-stat-num">20</span>
+                    <span class="inv-stat-label">Críticos / Obsoletos</span>
+                </div>
+                <div class="inv-stat-chip inv-stat-fallas">
+                    <span class="inv-stat-num">11</span>
+                    <span class="inv-stat-label">Operativos con Fallas</span>
+                </div>
+                <div class="inv-stat-chip inv-stat-operativo">
+                    <span class="inv-stat-num">9</span>
+                    <span class="inv-stat-label">Operativos Óptimos</span>
+                </div>
+            </div>
+
+            <!-- Barra de búsqueda y filtros interactivos -->
+            <div class="inv-controls">
+                <div class="inv-search-box">
+                    <input
+                        type="search"
+                        id="inv-search-input"
+                        class="inv-search-input"
+                        placeholder="🔎 Buscar por código (EQ-15), marca (Dell, HP), procesador, Windows 7..."
+                        aria-label="Buscar en el inventario de 40 equipos"
+                    >
+                </div>
+
+                <div class="inv-filters">
+                    <select id="inv-filter-sede" class="inv-select" aria-label="Filtrar por sede">
+                        <option value="all">📍 Todas las sedes (40)</option>
+                        <option value="piso1">Sede Principal · Piso 1 (12)</option>
+                        <option value="pb">Sede Principal · Planta Baja (6)</option>
+                        <option value="suc1">Sucursal 1 · Anzoátegui (8)</option>
+                        <option value="suc2">Sucursal 2 · Lara (7)</option>
+                        <option value="suc3">Sucursal 3 · Guárico (7)</option>
+                    </select>
+
+                    <select id="inv-filter-estado" class="inv-select" aria-label="Filtrar por estado">
+                        <option value="all">⚡ Todos los estados</option>
+                        <option value="inv-badge-critico">🔴 Crítico / Obsoleto (20)</option>
+                        <option value="inv-badge-fallas">🟡 Operativo con fallas (11)</option>
+                        <option value="inv-badge-operativo">🟢 Operativo óptimo (9)</option>
+                    </select>
+
+                    <span id="inv-counter" class="inv-counter">Mostrando 40 de 40 equipos</span>
+                </div>
+            </div>
+
+            <!-- Contenedor desplazable (scroll vertical + horizontal y arrastre con el ratón) -->
+            <div class="inv-scroll-container" id="inv-scroll-box" title="Desliza horizontal o verticalmente para explorar los 40 equipos">
+                <table class="sla-table inv-table" id="inv-table">
+                    <thead>
+                        <tr>
+                            <th class="inv-sticky-col">Código</th>
+                            <th>Sede / Ubicación Exacta</th>
+                            <th>Departamento / Puesto</th>
+                            <th>Marca y Modelo</th>
+                            <th>Procesador</th>
+                            <th>RAM / Disco</th>
+                            <th>Sistema Operativo</th>
+                            <th>Estado y Diagnóstico Técnico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-sede="piso1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-01</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Contratación de Planes (Puesto 1)</td>
+                            <td><strong>Dell OptiPlex 790</strong></td>
+                            <td>Intel Core i3-2120</td>
+                            <td>2 GB DDR3 / HDD 250 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Congelamientos frecuentes al abrir planillas de reservas.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-02</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Contratación de Planes (Puesto 2)</td>
+                            <td><strong>Dell OptiPlex 790</strong></td>
+                            <td>Intel Core i3-2120</td>
+                            <td>2 GB DDR3 / HDD 250 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Lentitud extrema en arranque y cierre inesperado de navegadores.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-03</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Contratación de Planes (Puesto 3)</td>
+                            <td><strong>HP Compaq 6200 Pro</strong></td>
+                            <td>Intel Pentium G630</td>
+                            <td>4 GB DDR3 / HDD 320 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Disco duro con sectores lentos; tarda más de 10 min en iniciar.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-04</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Contratación de Planes (Puesto 4)</td>
+                            <td><strong>Lenovo ThinkCentre M72e</strong></td>
+                            <td>Intel Core i3-3220</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Sobrecalentamiento por falta de mantenimiento preventivo.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-05</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Contratación de Planes (Puesto 5)</td>
+                            <td><strong>Dell OptiPlex 3020</strong></td>
+                            <td>Intel Core i3-4130</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Error de actualización instalada por el usuario sin permiso.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-06</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Coordinación de Planes Vacacionales</td>
+                            <td><strong>HP Compaq 6200 Pro</strong></td>
+                            <td>Intel Core i3-2100</td>
+                            <td>4 GB DDR3 / HDD 320 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Incompatibilidad con certificados web actuales y lentitud general.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-07</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Administración y Finanzas (Contabilidad 1)</td>
+                            <td><strong>Lenovo ThinkCentre M73</strong></td>
+                            <td>Intel Core i5-4570</td>
+                            <td>8 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Programas externos instalados sin autorización causan errores.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-08</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Administración y Finanzas (Contabilidad 2)</td>
+                            <td><strong>HP Compaq 8200 Elite</strong></td>
+                            <td>Intel Core i5-2400</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Conflictos de controladores de impresora fiscal/red.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-operativo">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-09</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Administración y Finanzas (Tesorería)</td>
+                            <td><strong>Lenovo IdeaCentre AIO A340</strong></td>
+                            <td>Intel Core i3-8145U</td>
+                            <td>8 GB DDR4 / HDD 1 TB</td>
+                            <td><span class="inv-os-pill">Windows 10 Home</span></td>
+                            <td><span class="inv-badge inv-badge-operativo">Operativo</span> Desempeño aceptable; requiere perfil de usuario sin permisos admin.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-10</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Administración y Finanzas (Presupuesto)</td>
+                            <td><strong>Dell OptiPlex 3040</strong></td>
+                            <td>Intel Core i5-6500</td>
+                            <td>8 GB DDR3L / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Archivo de nómina local sin respaldo automático en red.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-11</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Compras y Logística Turística</td>
+                            <td><strong>Lenovo ThinkCentre M73</strong></td>
+                            <td>Intel Core i3-4150</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Lentitud moderada por falta de limpieza de archivos temporales.</td>
+                        </tr>
+                        <tr data-sede="piso1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-12</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Piso 1</span></td>
+                            <td>Archivo y Control Administrativo</td>
+                            <td><strong>HP Compaq 8200 Elite</strong></td>
+                            <td>Intel Core i3-2120</td>
+                            <td>4 GB DDR3 / HDD 250 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto</span> Sin soporte de actualizaciones de seguridad; uso básico de oficina.</td>
+                        </tr>
+                        <tr data-sede="pb" data-estado="inv-badge-operativo">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-13</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Planta Baja</span></td>
+                            <td>Presidencia / Gerencia General</td>
+                            <td><strong>Dell OptiPlex 5040</strong></td>
+                            <td>Intel Core i5-6500</td>
+                            <td>8 GB DDR4 / SSD 256 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-operativo">Operativo</span> Buen rendimiento; requiere actualización de inventario en GLPI.</td>
+                        </tr>
+                        <tr data-sede="pb" data-estado="inv-badge-operativo">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-14</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Planta Baja</span></td>
+                            <td>Asistencia de Presidencia</td>
+                            <td><strong>Lenovo ThinkPad T470</strong></td>
+                            <td>Intel Core i5-7200U</td>
+                            <td>8 GB DDR4 / SSD 256 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-operativo">Operativo</span> Equipo portátil funcional; batería con desgaste moderado.</td>
+                        </tr>
+                        <tr data-sede="pb" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-15</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Planta Baja</span></td>
+                            <td>Atención al Público (Taquilla 1)</td>
+                            <td><strong>Dell OptiPlex 3050</strong></td>
+                            <td>Intel Core i5-7500</td>
+                            <td>8 GB DDR4 / SSD 240 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Intermitencia en el cable de red estructurado del puesto.</td>
+                        </tr>
+                        <tr data-sede="pb" data-estado="inv-badge-operativo">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-16</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Planta Baja</span></td>
+                            <td>Atención al Público (Taquilla 2)</td>
+                            <td><strong>HP ProBook 450 G4</strong></td>
+                            <td>Intel Core i5-7200U</td>
+                            <td>8 GB DDR4 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-operativo">Operativo</span> Funcional; requiere configuración de agente de soporte remoto.</td>
+                        </tr>
+                        <tr data-sede="pb" data-estado="inv-badge-operativo">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-17</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Planta Baja</span></td>
+                            <td>Departamento de Tecnología (Ing. Sistemas)</td>
+                            <td><strong>Dell OptiPlex 5040</strong></td>
+                            <td>Intel Core i5-6500</td>
+                            <td>8 GB DDR4 / SSD 256 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 / Linux</span></td>
+                            <td><span class="inv-badge inv-badge-operativo">Operativo</span> Estación principal de administración de red y servidor local GLPI.</td>
+                        </tr>
+                        <tr data-sede="pb" data-estado="inv-badge-operativo">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-18</strong></td>
+                            <td><span class="inv-sede-pill">Sede Principal · Planta Baja</span></td>
+                            <td>Departamento de Tecnología (Técnico TI)</td>
+                            <td><strong>Dell OptiPlex 3050</strong></td>
+                            <td>Intel Core i5-7500</td>
+                            <td>8 GB DDR4 / SSD 240 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-operativo">Operativo</span> Estación de diagnóstico, maquetación y soporte remoto a sucursales.</td>
+                        </tr>
+                        <tr data-sede="suc1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-19</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 1 · Anzoátegui</span></td>
+                            <td>Coordinación Regional Aragua</td>
+                            <td><strong>Dell OptiPlex 390</strong></td>
+                            <td>Intel Core i3-2120</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Crítico / Sin registro</span> Trasladado durante cuarentena sin acta de asignación.</td>
+                        </tr>
+                        <tr data-sede="suc1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-20</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 1 · Anzoátegui</span></td>
+                            <td>Atención a Organismos Públicos 1</td>
+                            <td><strong>HP Compaq 6000 Pro</strong></td>
+                            <td>Intel Core 2 Duo E8400</td>
+                            <td>2 GB DDR3 / HDD 160 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Pantallas azules recurrentes; detiene la carga de solicitudes.</td>
+                        </tr>
+                        <tr data-sede="suc1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-21</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 1 · Anzoátegui</span></td>
+                            <td>Atención a Organismos Públicos 2</td>
+                            <td><strong>HP Compaq 6000 Pro</strong></td>
+                            <td>Intel Core 2 Duo E8400</td>
+                            <td>2 GB DDR3 / HDD 160 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Falla de memoria y fuente; sin capacidad para multitarea.</td>
+                        </tr>
+                        <tr data-sede="suc1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-22</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 1 · Anzoátegui</span></td>
+                            <td>Gestión de Planes Estudiantiles 1</td>
+                            <td><strong>Dell OptiPlex 780</strong></td>
+                            <td>Intel Core 2 Duo E7500</td>
+                            <td>4 GB DDR3 / HDD 250 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Equipo reubicado sin notificación a TI; sin conexión a impresora.</td>
+                        </tr>
+                        <tr data-sede="suc1" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-23</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 1 · Anzoátegui</span></td>
+                            <td>Gestión de Planes Estudiantiles 2</td>
+                            <td><strong>Lenovo ThinkCentre M71e</strong></td>
+                            <td>Intel Core i3-2120</td>
+                            <td>4 GB DDR3 / HDD 320 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Actualización forzada por el usuario dañó el controlador de red.</td>
+                        </tr>
+                        <tr data-sede="suc1" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-24</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 1 · Anzoátegui</span></td>
+                            <td>Administración Regional Aragua</td>
+                            <td><strong>Dell OptiPlex 3020</strong></td>
+                            <td>Intel Core i3-4130</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Lentitud por falta de mantenimiento preventivo y antivirus vencido.</td>
+                        </tr>
+                        <tr data-sede="suc1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-25</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 1 · Anzoátegui</span></td>
+                            <td>Logística de Rutas Turísticas</td>
+                            <td><strong>HP Pavilion g4</strong></td>
+                            <td>Intel Core i3-2350M</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Home</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Crítico / Sin registro</span> Portátil llevado a casa en cuarentena; devuelto con fallas de SO.</td>
+                        </tr>
+                        <tr data-sede="suc1" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-26</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 1 · Anzoátegui</span></td>
+                            <td>Recepción y Archivo Regional</td>
+                            <td><strong>Lenovo ThinkCentre M71e</strong></td>
+                            <td>Intel Pentium G620</td>
+                            <td>2 GB DDR3 / HDD 250 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Reinicios aleatorios; requiere reemplazo urgente con convenio.</td>
+                        </tr>
+                        <tr data-sede="suc2" data-estado="inv-badge-operativo">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-27</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 2 · Lara</span></td>
+                            <td>Coordinación Regional Carabobo</td>
+                            <td><strong>Dell OptiPlex 7010</strong></td>
+                            <td>Intel Core i5-3470</td>
+                            <td>8 GB DDR3 / SSD 240 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-operativo">Operativo</span> Equipo funcional; usado como enlace de soporte remoto en la sede.</td>
+                        </tr>
+                        <tr data-sede="suc2" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-28</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 2 · Lara</span></td>
+                            <td>Contratación Turística Carabobo 1</td>
+                            <td><strong>Dell OptiPlex 3020</strong></td>
+                            <td>Intel Core i3-4130</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Usuario instaló software no autorizado provocando lentitud.</td>
+                        </tr>
+                        <tr data-sede="suc2" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-29</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 2 · Lara</span></td>
+                            <td>Contratación Turística Carabobo 2</td>
+                            <td><strong>HP ProDesk 400 G2</strong></td>
+                            <td>Intel Core i3-4160</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Fallo en actualización de Windows dejó el sistema inestable.</td>
+                        </tr>
+                        <tr data-sede="suc2" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-30</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 2 · Lara</span></td>
+                            <td>Atención a Convenios Educativos</td>
+                            <td><strong>HP Compaq 6300 Pro</strong></td>
+                            <td>Intel Core i3-3220</td>
+                            <td>4 GB DDR3 / HDD 320 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Desconexiones intermitentes de red local (tarjeta Ethernet).</td>
+                        </tr>
+                        <tr data-sede="suc2" data-estado="inv-badge-operativo">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-31</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 2 · Lara</span></td>
+                            <td>Administración Regional Carabobo</td>
+                            <td><strong>Lenovo ThinkCentre M73</strong></td>
+                            <td>Intel Core i5-4570</td>
+                            <td>8 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-operativo">Operativo</span> Rendimiento estable; pendiente estandarización de perfil sin admin.</td>
+                        </tr>
+                        <tr data-sede="suc2" data-estado="inv-badge-operativo">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-32</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 2 · Lara</span></td>
+                            <td>Promoción y Atención al Usuario</td>
+                            <td><strong>Dell Latitude E5450</strong></td>
+                            <td>Intel Core i5-5300U</td>
+                            <td>8 GB DDR3L / SSD 256 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-operativo">Operativo</span> Portátil funcional; trasladado de oficina sin actualizar inventario.</td>
+                        </tr>
+                        <tr data-sede="suc2" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-33</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 2 · Lara</span></td>
+                            <td>Operaciones y Transporte Turístico</td>
+                            <td><strong>HP Compaq 6300 Pro</strong></td>
+                            <td>Intel Pentium G2020</td>
+                            <td>4 GB DDR3 / HDD 250 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto</span> Bajo rendimiento para hojas de cálculo y sistemas web actuales.</td>
+                        </tr>
+                        <tr data-sede="suc3" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-34</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 3 · Guárico</span></td>
+                            <td>Coordinación Regional Yaracuy</td>
+                            <td><strong>Dell OptiPlex 980</strong></td>
+                            <td>Intel Core i5-650</td>
+                            <td>4 GB DDR3 / HDD 320 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Paradas</span> Fuente de poder deficiente provoca apagones repentinos.</td>
+                        </tr>
+                        <tr data-sede="suc3" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-35</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 3 · Guárico</span></td>
+                            <td>Atención al Público Yaracuy 1</td>
+                            <td><strong>Dell OptiPlex 790</strong></td>
+                            <td>Intel Core i3-2120</td>
+                            <td>2 GB DDR3 / HDD 250 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Congelamiento total al procesar múltiples registros vacacionales.</td>
+                        </tr>
+                        <tr data-sede="suc3" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-36</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 3 · Guárico</span></td>
+                            <td>Atención al Público Yaracuy 2</td>
+                            <td><strong>HP Compaq 6005 Pro</strong></td>
+                            <td>AMD Athlon II X2 B24</td>
+                            <td>2 GB DDR3 / HDD 160 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Equipo inoperativo por fallo de disco duro; paraliza el puesto.</td>
+                        </tr>
+                        <tr data-sede="suc3" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-37</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 3 · Guárico</span></td>
+                            <td>Gestión de Planes Comunitarios</td>
+                            <td><strong>Dell OptiPlex 390</strong></td>
+                            <td>Intel Core i3-2100</td>
+                            <td>4 GB DDR3 / HDD 320 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Crítico / Sin registro</span> Movido desde otra área en cuarentena sin control de TI.</td>
+                        </tr>
+                        <tr data-sede="suc3" data-estado="inv-badge-fallas">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-38</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 3 · Guárico</span></td>
+                            <td>Administración Regional Yaracuy</td>
+                            <td><strong>HP ProDesk 400 G1</strong></td>
+                            <td>Intel Core i3-4130</td>
+                            <td>4 GB DDR3 / HDD 500 GB</td>
+                            <td><span class="inv-os-pill">Windows 10 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-fallas">Operativo con fallas</span> Errores de drivers tras actualización manual realizada por el usuario.</td>
+                        </tr>
+                        <tr data-sede="suc3" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-39</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 3 · Guárico</span></td>
+                            <td>Logística y Recreación Regional</td>
+                            <td><strong>Lenovo ThinkCentre M72e</strong></td>
+                            <td>Intel Celeron G550</td>
+                            <td>2 GB DDR3 / HDD 250 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Extrema lentitud; incapaz de ejecutar herramientas remotas fluidas.</td>
+                        </tr>
+                        <tr data-sede="suc3" data-estado="inv-badge-critico">
+                            <td class="inv-sticky-col cell-category"><strong>EQ-40</strong></td>
+                            <td><span class="inv-sede-pill">Sucursal 3 · Guárico</span></td>
+                            <td>Archivo y Soporte Operativo Local</td>
+                            <td><strong>HP Compaq 6005 Pro</strong></td>
+                            <td>AMD Athlon II X2 B24</td>
+                            <td>4 GB DDR3 / HDD 250 GB</td>
+                            <td><span class="inv-os-pill">Windows 7 Pro</span></td>
+                            <td><span class="inv-badge inv-badge-critico">Obsoleto / Crítico</span> Ruido en ventiladores y reinicios por temperatura; requiere reemplazo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="sla-note" style="margin-top: 0.75rem;">
+                ↔️ <em>Consejo: Puedes arrastrar o deslizar la tabla horizontal y verticalmente, o usar el buscador y los filtros superiores.</em> · 📎 <a href="#ENLACE-DRIVE-INVENTARIO-40-EQUIPOS" target="_blank" rel="noopener noreferrer">Descargar Inventario (INVENTARIO.xlsx) en Google Drive</a>
+            </p>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 3: PARTE I · A. HABILIDADES TÉCNICAS              -->
+        <!-- ========================================================= -->
+        <section id="tab-habilidades-tecnicas" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="section-title">🧰 Parte I · Habilidades Técnicas (A.1 y A.2)</h2>
+
+            <div class="panel-card" style="margin-bottom: 2rem;">
+                <h3 class="panel-title">A.1 Cuadro de Habilidades Técnicas para Atender el Caso de Estudio</h3>
+
+                <div class="inv-scroll-container inv-scroll-solo" id="a1-scroll-box" title="Desliza o arrastra para explorar el Cuadro A.1">
+                    <table class="sla-table inv-table" id="a1-table">
+                        <thead>
+                            <tr>
+                                <th class="inv-sticky-col">Problema del caso</th>
+                                <th>Habilidad técnica necesaria</th>
+                                <th>¿Por qué se necesita?</th>
+                                <th>Marco teórico que la respalda</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>1. Equipos obsoletos</strong><br><small style="color:#9ca3af; font-weight:400;">~18–20 PC con 2–4 GB RAM y discos desgastados</small></td>
+                                <td><strong>Conocimientos en hardware de computadoras</strong> y diagnóstico de componentes</td>
+                                <td>Para evaluar el estado físico y rendimiento de cada estación y determinar si el equipo se repara, repotencia o se reemplaza prioritariamente.</td>
+                                <td><span class="inv-badge inv-badge-operativo">ITIL 4</span> Gestión de Incidentes y Gestión de la Disponibilidad</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>2. Traslado en cuarentena sin registro</strong><br><small style="color:#9ca3af; font-weight:400;">Equipos movidos entre sedes sin control</small></td>
+                                <td><strong>Gestión de inventarios de TI</strong> y configuración de herramientas CMDB (GLPI)</td>
+                                <td>Para levantar un censo físico y lógico de los 40 equipos, asignarles etiquetas únicas y rastrear su ubicación exacta entre las 4 sedes.</td>
+                                <td><span class="inv-badge inv-badge-fallas">COBIT</span> (APO08 / MEA01) · <span class="inv-badge inv-badge-critico">ISO/IEC 20000-1</span> Gestión de la Configuración</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>3. Actualizaciones y apps sin permiso</strong><br><small style="color:#9ca3af; font-weight:400;">Instalaciones realizadas por usuarios</small></td>
+                                <td><strong>Administración de sistemas operativos</strong>, políticas de grupo (GPO) y control de privilegios</td>
+                                <td>Para restringir las cuentas de usuario estándar, bloquear instalaciones no autorizadas y mantener una imagen base estandarizada.</td>
+                                <td><span class="inv-badge inv-badge-fallas">COBIT</span> (DSS05: Seguridad) · <span class="inv-badge inv-badge-operativo">ITIL 4</span> Control de Cambios</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>4. Fallos tras cambios no autorizados</strong><br><small style="color:#9ca3af; font-weight:400;">Errores de sistema operativo y drivers</small></td>
+                                <td><strong>Resolución de fallos de software</strong>, recuperación de SO y gestión de controladores</td>
+                                <td>Para diagnosticar incompatibilidades, revertir cambios defectuosos y restaurar la operatividad de los puestos de contratación y finanzas.</td>
+                                <td><span class="inv-badge inv-badge-operativo">ITIL 4</span> Gestión de Incidentes y Gestión de Problemas</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>5. Fallas en sucursales del interior</strong><br><small style="color:#9ca3af; font-weight:400;">Aragua, Carabobo y Yaracuy</small></td>
+                                <td><strong>Configuración de acceso remoto seguro</strong> y asistencia técnica a distancia</td>
+                                <td>Para asistir a distancia a los trabajadores regionales en tiempo real sin depender de traslados físicos costosos o demorados.</td>
+                                <td><span class="inv-badge inv-badge-operativo">ITIL 4</span> Mesa de Servicio · <span class="inv-badge inv-badge-fallas">COBIT</span> (DSS05 / DSS06)</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>6. Llamadas sin registro ni seguimiento</strong><br><small style="color:#9ca3af; font-weight:400;">Atención informal sin trazabilidad</small></td>
+                                <td><strong>Implementación de Mesa de Ayuda</strong> y gestión de tickets (GLPI)</td>
+                                <td>Para centralizar, clasificar por prioridad y documentar cada falla reportada, midiendo tiempos de respuesta y evitando casos olvidados.</td>
+                                <td><span class="inv-badge inv-badge-operativo">ITIL 4</span> Mesa de Servicio · <span class="inv-badge inv-badge-critico">ISO/IEC 20000-1</span> Gestión de Incidentes</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>7. Convenio sin plan de implementación</strong><br><small style="color:#9ca3af; font-weight:400;">Recepción de nuevos equipos sin protocolo</small></td>
+                                <td><strong>Maquetación de software base</strong>, clonación de imágenes y planificación de despliegue TI</td>
+                                <td>Para recibir, probar, configurar con software institucional y distribuir ordenadamente los nuevos equipos sin interrumpir las jornadas.</td>
+                                <td><span class="inv-badge inv-badge-operativo">ITIL 4</span> Despliegue y Liberación · <span class="inv-badge inv-badge-fallas">COBIT</span> (BAI05)</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>8. Riesgo de pérdida de archivos</strong><br><small style="color:#9ca3af; font-weight:400;">Contratos y nóminas locales sin respaldo</small></td>
+                                <td><strong>Gestión de copias de seguridad (backups)</strong> y migración segura de datos</td>
+                                <td>Para respaldar contratos, nóminas y registros vacacionales antes de reparar o sustituir estaciones antiguas, asegurando la continuidad operativa.</td>
+                                <td><span class="inv-badge inv-badge-operativo">ITIL 4</span> Continuidad del Servicio · <span class="inv-badge inv-badge-fallas">COBIT</span> (APO12 / DSS04)</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>9. Falta de mantenimiento preventivo</strong><br><small style="color:#9ca3af; font-weight:400;">Reinicios y sobrecalentamiento</small></td>
+                                <td><strong>Mantenimiento preventivo físico y lógico</strong> de estaciones de trabajo</td>
+                                <td>Para limpiar componentes internos, verificar fuentes de poder, optimizar el sistema y prolongar la vida útil de los equipos operativos.</td>
+                                <td><span class="inv-badge inv-badge-operativo">ITIL 4</span> Mantenimiento Preventivo · <span class="inv-badge inv-badge-critico">ISO/IEC 20000-1</span> Disponibilidad</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>10. Fallas de red en taquillas y sedes</strong><br><small style="color:#9ca3af; font-weight:400;">Intermitencia LAN/WAN y puntos de red</small></td>
+                                <td><strong>Diagnóstico de redes locales (LAN/WAN)</strong>, cableado estructurado y direccionamiento IP</td>
+                                <td>Para identificar y corregir fallos de conexión a internet, carpetas compartidas e impresoras de red en la Sede Principal y sucursales.</td>
+                                <td><span class="inv-badge inv-badge-operativo">ITIL 4</span> Gestión de Eventos y Disponibilidad</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="panel-card" style="margin-bottom: 2rem;">
+                <h3 class="panel-title">A.2 Cuadro de Habilidades Técnicas del Equipo de Trabajo</h3>
+
+                <div class="inv-scroll-container inv-scroll-solo" id="a2-scroll-box" title="Desliza o arrastra para explorar el Cuadro A.2">
+                    <table class="sla-table inv-table" id="a2-table">
+                        <thead>
+                            <tr>
+                                <th class="inv-sticky-col">Nombre del integrante</th>
+                                <th>Habilidad técnica que domina</th>
+                                <th>Evidencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>Keimer Vergara</strong></td>
+                                <td><strong>Manejo de GLPI</strong> y registro de tickets de soporte</td>
+                                <td><span class="inv-badge inv-badge-operativo">Evidencia</span></td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>Keimer Vergara</strong></td>
+                                <td><strong>Diagnóstico de hardware</strong> y evaluación de equipos obsoletos</td>
+                                <td><span class="inv-badge inv-badge-operativo">Evidencia</span></td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>Keimer Vergara</strong></td>
+                                <td><strong>Configuración de acceso</strong> y soporte remoto a sucursales</td>
+                                <td><span class="inv-badge inv-badge-operativo">Evidencia</span></td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>Rubén Guerrero</strong></td>
+                                <td><strong>Administración de sistemas operativos</strong> y controladores (drivers)</td>
+                                <td><span class="inv-badge inv-badge-fallas">Evidencia</span></td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>Rubén Guerrero</strong></td>
+                                <td><strong>Mantenimiento preventivo</strong> físico y lógico de estaciones</td>
+                                <td><span class="inv-badge inv-badge-fallas">Evidencia</span></td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>Rubén Guerrero</strong></td>
+                                <td><strong>Diagnóstico de redes locales (LAN)</strong> y cableado estructurado</td>
+                                <td><span class="inv-badge inv-badge-fallas">Evidencia</span></td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>Jennifer Moreno</strong></td>
+                                <td><strong>Gestión de inventarios de TI</strong> y control de activos (CMDB)</td>
+                                <td><span class="inv-badge inv-badge-critico">Evidencia</span></td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>Jennifer Moreno</strong></td>
+                                <td><strong>Maquetación de software base</strong> y clonación de imágenes</td>
+                                <td><span class="inv-badge inv-badge-critico">Evidencia</span></td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>Jennifer Moreno</strong></td>
+                                <td><strong>Gestión de copias de seguridad (backups)</strong> y migración de datos</td>
+                                <td><span class="inv-badge inv-badge-critico">Evidencia</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 4: B. HABILIDADES BLANDAS (Sesión Didáctica 1)      -->
+        <!-- ========================================================= -->
+        <section id="tab-habilidades-blandas" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="section-title">🤝 Parte I · B. Habilidades Blandas en el Soporte (B.1 a B.4)</h2>
+
+            <!-- CUADRO B.1 -->
+            <div class="panel-card" style="margin-bottom: 2rem;">
+                <h3 class="panel-title">B.1 Cuadro de Habilidades Blandas para Atender la Situación Actual</h3>
+
+                <div class="inv-scroll-container inv-scroll-solo" id="b1-scroll-box" title="Desliza o arrastra para explorar el Cuadro B.1">
+                    <table class="sla-table inv-table" id="b1-table">
+                        <thead>
+                            <tr>
+                                <th class="inv-sticky-col">Situación del caso</th>
+                                <th>Habilidad blanda necesaria</th>
+                                <th>Conducta observable esperada</th>
+                                <th>Marco teórico que la respalda</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>1. Trabajador que se llevó el equipo y se queja</strong><br><small style="color:#9ca3af; font-weight:400;">Reclamo por fallas tras traslado en cuarentena</small></td>
+                                <td><strong>Empatía</strong></td>
+                                <td>Escuchar sin interrumpir, validar su frustración antes de explicar el proceso de revisión y soporte.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Inteligencia Emocional (Empatía)</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>2. Empleado de sucursal molesto por lentitud</strong><br><small style="color:#9ca3af; font-weight:400;">Aragua, Carabobo o Yaracuy sin atención previa</small></td>
+                                <td><strong>Comunicación Asertiva</strong></td>
+                                <td>Mantener tono de voz calmado, expresar comprensión y explicar claramente los pasos del soporte remoto sin tecnicismos.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Inteligencia Emocional (Habilidades sociales)</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>3. Usuario angustiado por pérdida de archivos</strong><br><small style="color:#9ca3af; font-weight:400;">Fallo de disco en planillas o nómina local</small></td>
+                                <td><strong>Calma y Paciencia</strong></td>
+                                <td>Conservar la serenidad ante el tono elevado del usuario, transmitir tranquilidad y guiar el respaldo paso a paso.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Inteligencia Emocional (Autorregulación)</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>4. Coordinador Regional exige atención inmediata</strong><br><small style="color:#9ca3af; font-weight:400;">Desconoce la carga del departamento de TI</small></td>
+                                <td><strong>Negociación y Gestión de Expectativas</strong></td>
+                                <td>Escuchar la urgencia, explicar la prioridad del inventario actual y acordar un tiempo realista o solución temporal.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Inteligencia Emocional · <span class="inv-badge inv-badge-fallas">Fisher y Ury</span> Negociación</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>5. Trabajador instaló programas sin permiso</strong><br><small style="color:#9ca3af; font-weight:400;">Causó errores en el sistema operativo</small></td>
+                                <td><strong>Orientación al Servicio con Firmeza</strong></td>
+                                <td>Explicar amablemente pero con claridad los riesgos de instalar software externo antes de restaurar la imagen base.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Influencia Social · <span class="inv-badge inv-badge-critico">ITIL 4</span> Control de Cambios</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>6. Empleado de taquilla bajo presión de fila</strong><br><small style="color:#9ca3af; font-weight:400;">Nerviosismo en atención al público</small></td>
+                                <td><strong>Manejo del Estrés bajo Presión</strong></td>
+                                <td>Actuar con eficiencia y serenidad para diagnosticar el fallo de red sin contagiarse de la ansiedad del puesto.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Inteligencia Emocional (Autocontrol)</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>7. Trabajador renuente a entregar su PC</strong><br><small style="color:#9ca3af; font-weight:400;">Alega exceso de trabajo acumulado</small></td>
+                                <td><strong>Persuasión y Empatía</strong></td>
+                                <td>Explicar los beneficios preventivos para evitar paradas mayores y pactar un horario flexible de intervención.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Inteligencia Emocional (Habilidades sociales)</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>8. Usuario reporta falla intermitente de red</strong><br><small style="color:#9ca3af; font-weight:400;">No se reproduce al llegar el técnico</small></td>
+                                <td><strong>Escucha Activa y Respeto</strong></td>
+                                <td>Dar credibilidad al testimonio del usuario y formular preguntas detalladas sin minimizar ni desestimar su reporte.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Empatía · <span class="inv-badge inv-badge-critico">ITIL 4</span> Gestión de Incidentes</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>9. Múltiples reportes simultáneos de fallas</strong><br><small style="color:#9ca3af; font-weight:400;">Alta demanda con solo 2 personas en TI</small></td>
+                                <td><strong>Priorización y Compostura</strong></td>
+                                <td>Mantener el orden interno, clasificar según impacto operativo e informar tiempos estimados de respuesta a cada área.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Autorregulación · <span class="inv-badge inv-badge-critico">ITIL 4</span> Mesa de Servicio</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-sticky-col cell-category"><strong>10. Usuario confundido por términos técnicos</strong><br><small style="color:#9ca3af; font-weight:400;">Barrera de comunicación con personal administrativo</small></td>
+                                <td><strong>Adaptabilidad y Comunicación Clara</strong></td>
+                                <td>Traducir el diagnóstico a un lenguaje cotidiano y accesible, verificando que el usuario comprenda los pasos a seguir.</td>
+                                <td><span class="inv-badge inv-badge-operativo">Goleman</span> Inteligencia Emocional (Comunicación)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <figure style="margin: 1.5rem 0 0; text-align: center;">
+                    <figcaption class="sla-note" style="margin-top: 0.75rem;">
+                        Cuadro B.1 · Habilidades blandas y conductas observables ante conflictos del caso bajo los enfoques de Goleman, Riggio y SayIT.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- CUADRO B.2 -->
+            <div class="panel-card" style="margin-bottom: 2rem;">
+                <h3 class="panel-title">B.2 Cuadro de Habilidades Blandas del Equipo de Trabajo</h3>
+                <figure style="margin: 0; text-align: center;">
+                    <img
+                        src="img/cuadro-b2.jpg"
+                        alt="Cuadro B.2 de Habilidades Blandas del Equipo de Trabajo"
+                        style="width: 100%; max-width: 100%; height: auto; border-radius: 0.5rem; border: 1px solid #cbd5e1;"
+                    >
+                    <figcaption class="sla-note" style="margin-top: 0.75rem;">
+                        Cuadro B.2 · Habilidades blandas demostradas por el equipo durante las dinámicas y simulaciones de atención.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- B.3 Decálogo del Soporte -->
+            <div class="panel-card" style="margin-bottom: 2rem;">
+                <h3 class="panel-title">B.3 Decálogo del Soporte: 10 Principios de Conducta Interpersonal</h3>
+            
+                <div class="decalogo-image-container" style="text-align: center; margin-top: 1.5rem;">
+                    <img
+                        src="img/decalogo.jpeg"
+                        alt="Decálogo de Conducta Interpersonal del Técnico de Soporte"
+                        class="decalogo-graphic"
+                        style="max-width: 100%; height: auto; border-radius: 0.5rem;"
+                    >
+                </div>
+            </div>
+
+            <!-- B.4 Infografía del Marco Teórico -->
+            <h3 class="panel-title">B.4 Infografía del Marco Teórico (Goleman, Riggio y SayIT)</h3>
+            <div class="grid-marco">
+                <div class="marco-card marco-card-blue">
+                    <h4 class="marco-card-title">Capa 1 — Definición Teórica</h4>
+                    <p class="marco-card-text">
+                        <strong>Daniel Goleman (Inteligencia Emocional):</strong> Capacidad de reconocer, comprender y regular las emociones propias y ajenas (autoconciencia, autorregulación, empatía y habilidades sociales) para mantener el equilibrio ante tensiones.<br><br>
+                        <strong>Ronald E. Riggio (Habilidades Sociales):</strong> Competencias observables de comunicación verbal y no verbal (expresividad, sensibilidad y control social) para interactuar con claridad y manejar conflictos.<br><br>
+                        <strong>SayIT (Soft Skills para TI):</strong> Enfoque especializado para soporte tecnológico que combina empatía, escucha activa, lenguaje libre de tecnicismos y orientación al servicio para generar confianza.
+                    </p>
+                </div>
+                <div class="marco-card marco-card-emerald">
+                    <h4 class="marco-card-title">Capa 2 — Aplicación al Caso de la Fundación</h4>
+                    <p class="marco-card-text">
+                        <strong>Goleman en la Fundación:</strong> Ante el reclamo de un trabajador de sucursal frustrado por la lentitud de su equipo, el técnico regula sus propias emociones para no ponerse a la defensiva y valida la molestia del usuario.<br><br>
+                        <strong>Riggio en la Fundación:</strong> Al tratar con empleados que hicieron cambios sin permiso o movieron equipos en cuarentena, el técnico usa sensibilidad social y asertividad para explicar las normas sin culpabilizar.<br><br>
+                        <strong>SayIT en la Fundación:</strong> Durante la transición hacia el registro formal de solicitudes y la entrega de equipos del convenio, el técnico guía al personal en lenguaje cotidiano y cercano.
+                    </p>
+                </div>
+                <div class="marco-card marco-card-purple">
+                    <h4 class="marco-card-title">Capa 3 — Autoevaluación Personal</h4>
+                    <p class="marco-card-text">
+                        <strong>Compromiso individual de mejora:</strong><br><br>
+                        <em>"Al analizar la autorregulación y empatía de Goleman junto con el enfoque SayIT, reconozco que debo reforzar mi escucha activa y paciencia cuando atiendo a usuarios impacientes en momentos de alta carga, asegurándome de validar primero su frustración antes de pasar a explicar la solución."</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 5: 1. CLASIFICACIÓN DEL SOPORTE TÉCNICO (ITIL 4)  -->
+        <!-- ========================================================= -->
+        <section id="tab-clasificacion" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="section-title">📋 1. Clasificación del Soporte Técnico (ITIL 4)</h2>
+
+            <h3 class="panel-title">1.1 Problemas Actuales Identificados en la Fundación</h3>
+            <div class="table-wrapper" style="margin-bottom: 2rem;">
+                <table class="sla-table">
+                    <thead>
+                        <tr>
+                            <th>Problema</th>
+                            <th>¿Incidente o problema? (ITIL)</th>
+                            <th>Naturaleza</th>
+                            <th>Consecuencia para la Fundación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cell-category">Equipos obsoletos (~18–20 unidades con 2–4 GB RAM y discos desgastados)</td>
+                            <td><strong>Problema</strong> (causa raíz: falta de renovación tecnológica y mantenimiento preventivo)</td>
+                            <td>Técnico</td>
+                            <td>Trabajadores no pueden ejecutar con eficiencia sus labores de contratación de servicios y planes vacacionales.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Traslado de computadores durante la cuarentena sin registro ni control</td>
+                            <td><strong>Problema</strong> (causa raíz: ausencia de política de gestión de activos y configuración)</td>
+                            <td>Proceso</td>
+                            <td>Desconocimiento de la ubicación real de los ~40 equipos, dificultando auditorías, mantenimiento y asignación.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Actualizaciones de software realizadas por usuarios sin autorización</td>
+                            <td><strong>Problema</strong> (causa raíz: falta de control de cambios y exceso de privilegios de administrador)</td>
+                            <td>Proceso / Técnico</td>
+                            <td>Incompatibilidades de aplicaciones, errores de controladores y fallas recurrentes en los puestos de trabajo.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Fallas críticas en sucursales del interior que no se resuelven a distancia</td>
+                            <td><strong>Incidente</strong> (recurrente por falta de soporte local y equipos antiguos)</td>
+                            <td>Técnico / Proceso</td>
+                            <td>Paralización total de las actividades operativas y de atención al público en la sucursal afectada.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Sobrecarga del Departamento de TI (2 personas para 4 sedes sin presupuesto)</td>
+                            <td><strong>Problema</strong> (causa raíz: déficit estructural de personal y ausencia de herramienta de tickets)</td>
+                            <td>Proceso / Comunicación</td>
+                            <td>Atención reactiva por llamadas, tiempos de espera elevados y frustración en los usuarios de las sedes.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Firma del convenio de dotación sin plan de implementación ni soporte</td>
+                            <td><strong>Problema</strong> (causa raíz: falta de planificación de transición del servicio tecnológico)</td>
+                            <td>Proceso / Comunicación</td>
+                            <td>Riesgo de desorden en la recepción, configuración, distribución y soporte de los nuevos equipos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="panel-title">1.2 y 1.3 Problemas Técnicos Futuros ante la Recepción de Equipos del Convenio</h3>
+            <div class="table-wrapper">
+                <table class="sla-table">
+                    <thead>
+                        <tr>
+                            <th># / Problema Técnico Futuro</th>
+                            <th>¿Incidente o problema? (ITIL)</th>
+                            <th>Naturaleza</th>
+                            <th>Consecuencia para la Fundación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cell-category">1. Incompatibilidad de sistemas institucionales antiguos con el nuevo SO (Windows 11)</td>
+                            <td><strong>Problema</strong> (falta de pruebas previas de compatibilidad antes del despliegue)</td>
+                            <td>Técnico</td>
+                            <td>Bloqueo en la ejecución de aplicaciones internas de contratación y administración al migrar de puesto.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">2. Pérdida o extravío de archivos locales durante la migración desde equipos viejos</td>
+                            <td><strong>Incidente</strong> (interrupción operativa por ausencia de respaldo previo estandarizado)</td>
+                            <td>Proceso / Técnico</td>
+                            <td>Pérdida de contratos, listados de trabajadores y registros vacacionales no respaldados en red.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">3. Saturación del ancho de banda en las 4 sedes por descargas masivas de actualizaciones</td>
+                            <td><strong>Incidente</strong> (degradación abrupta de red por falta de gestión de parches centralizada)</td>
+                            <td>Técnico</td>
+                            <td>Caída o lentitud extrema del acceso a internet y del soporte remoto hacia las sucursales del interior.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">4. Fallas de fábrica (DOA - Dead on Arrival) o defectos en componentes nuevos</td>
+                            <td><strong>Incidente</strong> (falla puntual de hardware en equipos recién desembalados)</td>
+                            <td>Técnico</td>
+                            <td>Retraso en la puesta en marcha de puestos clave mientras se tramita la garantía con la empresa privada.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">5. Conflictos de direccionamiento IP o nombres duplicados en la red local (LAN)</td>
+                            <td><strong>Incidente</strong> (error de configuración al conectar equipos sin inventario de red)</td>
+                            <td>Técnico</td>
+                            <td>Pérdida de conectividad a carpetas compartidas, impresoras de red y acceso a sistemas internos.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">6. Incompatibilidad de controladores (drivers) con impresoras y escáneres antiguos</td>
+                            <td><strong>Problema</strong> (diferencia tecnológica entre periféricos heredados y equipos nuevos)</td>
+                            <td>Técnico</td>
+                            <td>Imposibilidad de imprimir planillas, comprobantes y contratos de planes turísticos en las sedes.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">7. Desconocimiento de los usuarios sobre el nuevo entorno operativo y herramientas</td>
+                            <td><strong>Problema</strong> (brecha de capacitación en la transición tecnológica)</td>
+                            <td>Comunicación</td>
+                            <td>Aumento exponencial de llamadas y tickets básicos al técnico de soporte, saturando la mesa de ayuda.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">8. Reaparición de instalaciones no autorizadas en los equipos nuevos</td>
+                            <td><strong>Problema</strong> (no restringir cuentas de usuario estándar desde la maquetación inicial)</td>
+                            <td>Proceso / Técnico</td>
+                            <td>Degradación temprana del rendimiento, vulnerabilidades de seguridad y pérdida de estandarización.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">9. Demora en traslado, configuración y soporte en las 3 sucursales del interior</td>
+                            <td><strong>Problema</strong> (limitación logística de 2 personas sin soporte remoto preinstalado)</td>
+                            <td>Proceso</td>
+                            <td>Equipos nuevos almacenados sin instalar en regiones o incapacidad de asistirlos a distancia.</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">10. Vacíos en la ejecución de garantías con la empresa privada proveedora</td>
+                            <td><strong>Problema</strong> (ausencia de protocolo de actas de entrega, seriales y niveles de garantía)</td>
+                            <td>Proceso / Comunicación</td>
+                            <td>Pérdida de cobertura de soporte del proveedor ante fallas tempranas de hardware.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 6: 2. TABLAS DE SLA POR CATEGORÍA DE ATENCIÓN     -->
+        <!-- ========================================================= -->
+        <section id="tab-sla" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="section-title">🛠️ 2. Tablas de SLA por Categoría de Atención</h2>
+
+            <div class="table-wrapper">
+                <table class="sla-table">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Prioridad</th>
+                            <th>Impacto a usuarios (cuántos)</th>
+                            <th>Urgencia</th>
+                            <th>Tiempo de respuesta</th>
+                            <th>Tiempo de resolución</th>
+                            <th>¿A quién se escala si no se cumple?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cell-category">Hardware</td>
+                            <td><span class="priority-critical">Crítico</span></td>
+                            <td>Alto (Sede completa o &gt;10 usuarios sin operar)</td>
+                            <td>Alta</td>
+                            <td>15 min</td>
+                            <td>2 horas (Sede) / 24 horas (Interior)</td>
+                            <td>Ing. en Sistemas (Jefe de TI) / Proveedor Convenio</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Hardware</td>
+                            <td><span class="priority-high">Alto</span></td>
+                            <td>Medio-Alto (Departamento completo: 4 a 9 usuarios)</td>
+                            <td>Alta</td>
+                            <td>30 min</td>
+                            <td>4 horas</td>
+                            <td>Ing. en Sistemas (Jefe de TI)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Hardware</td>
+                            <td><span class="priority-medium">Medio</span></td>
+                            <td>Bajo-Medio (1 a 3 usuarios con equipo alterno)</td>
+                            <td>Intermedia</td>
+                            <td>2 horas</td>
+                            <td>24 horas</td>
+                            <td>Ing. en Sistemas (Jefe de TI)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Hardware</td>
+                            <td><span class="priority-low">Bajo</span></td>
+                            <td>Bajo (1 usuario, falla estética o periférico secundario)</td>
+                            <td>Baja</td>
+                            <td>8 horas</td>
+                            <td>72 horas</td>
+                            <td>Ing. en Sistemas (revisión semanal)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Software</td>
+                            <td><span class="priority-critical">Crítico</span></td>
+                            <td>Alto (Todos los usuarios / caída de sistema central)</td>
+                            <td>Alta</td>
+                            <td>15 min</td>
+                            <td>1 hora</td>
+                            <td>Ing. en Sistemas (Jefe de TI)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Software</td>
+                            <td><span class="priority-high">Alto</span></td>
+                            <td>Medio-Alto (Área de contratación o finanzas: 4–8 usuarios)</td>
+                            <td>Alta</td>
+                            <td>30 min</td>
+                            <td>3 horas</td>
+                            <td>Ing. en Sistemas (Jefe de TI)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Software</td>
+                            <td><span class="priority-medium">Medio</span></td>
+                            <td>Bajo-Medio (1 a 3 usuarios con error de aplicación)</td>
+                            <td>Intermedia</td>
+                            <td>2 horas</td>
+                            <td>8 horas</td>
+                            <td>Ing. en Sistemas (Jefe de TI)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Software</td>
+                            <td><span class="priority-low">Bajo</span></td>
+                            <td>Bajo (1 usuario: solicitud de actualización o paquete)</td>
+                            <td>Baja</td>
+                            <td>24 horas</td>
+                            <td>48 horas</td>
+                            <td>Ing. en Sistemas (control de cambios)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Redes y Conectividad</td>
+                            <td><span class="priority-critical">Crítico</span></td>
+                            <td>Alto (Sede Principal completa o sucursal incomunicada)</td>
+                            <td>Alta</td>
+                            <td>10 min</td>
+                            <td>2 horas</td>
+                            <td>Ing. en Sistemas + Proveedor ISP</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Redes y Conectividad</td>
+                            <td><span class="priority-high">Alto</span></td>
+                            <td>Medio-Alto (Un piso completo o grupo de 5–10 usuarios)</td>
+                            <td>Alta</td>
+                            <td>20 min</td>
+                            <td>3 horas</td>
+                            <td>Ing. en Sistemas (Jefe de TI)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Redes y Conectividad</td>
+                            <td><span class="priority-medium">Medio</span></td>
+                            <td>Bajo-Medio (1 a 3 usuarios con intermitencia o punto red)</td>
+                            <td>Intermedia</td>
+                            <td>1 hora</td>
+                            <td>6 horas</td>
+                            <td>Ing. en Sistemas (Jefe de TI)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Redes y Conectividad</td>
+                            <td><span class="priority-low">Bajo</span></td>
+                            <td>Bajo (1 usuario: solicitud de punto de red o ajuste menor)</td>
+                            <td>Baja</td>
+                            <td>12 horas</td>
+                            <td>48 horas</td>
+                            <td>Ing. en Sistemas (planificación mensual)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Soporte Remoto</td>
+                            <td><span class="priority-critical">Crítico</span></td>
+                            <td>Alto (Sucursal completa del interior paralizada: 7–8 usuarios)</td>
+                            <td>Alta</td>
+                            <td>15 min</td>
+                            <td>2 horas</td>
+                            <td>Ing. en Sistemas + Coordinador Regional</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Soporte Remoto</td>
+                            <td><span class="priority-high">Alto</span></td>
+                            <td>Medio-Alto (3 a 6 usuarios de sucursal sin acceso a sistemas)</td>
+                            <td>Alta</td>
+                            <td>30 min</td>
+                            <td>4 horas</td>
+                            <td>Ing. en Sistemas (Jefe de TI)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Soporte Remoto</td>
+                            <td><span class="priority-medium">Medio</span></td>
+                            <td>Bajo-Medio (1 a 2 usuarios remotos con falla de configuración)</td>
+                            <td>Intermedia</td>
+                            <td>2 horas</td>
+                            <td>8 horas</td>
+                            <td>Ing. en Sistemas (Jefe de TI)</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">Soporte Remoto</td>
+                            <td><span class="priority-low">Bajo</span></td>
+                            <td>Bajo (1 usuario remoto: consulta guiada o mantenimiento)</td>
+                            <td>Baja</td>
+                            <td>12 horas</td>
+                            <td>48 horas</td>
+                            <td>Ing. en Sistemas (seguimiento GLPI)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="decalogo-box" style="margin-top: 1.5rem;">
+                <p class="decalogo-text">
+                    <strong>2.2 Justificación de los tiempos asignados (ITIL 4 e ISO/IEC 20000):</strong> Los tiempos de respuesta y resolución fueron establecidos aplicando la práctica de <em>Gestión de Incidentes de ITIL 4</em>, la cual determina la prioridad a partir del cruce entre el <strong>impacto operativo</strong> (cantidad de trabajadores o sedes afectadas) y la <strong>urgencia</strong> con la que la Fundación requiere restablecer sus procesos de contratación y atención turística, ajustando los plazos a la capacidad real de un equipo de solo dos personas (Ingeniero y Técnico) que atiende cuatro sedes. Asimismo, conforme a la norma <em>ISO/IEC 20000-1</em>, estos acuerdos se formalizan como evidencia documental verificable entre el Departamento de Tecnología y las gerencias de la Fundación.
+                </p>
+            </div>
+
+            <div class="audit-box" style="margin-top: 1rem;">
+                <h3 class="audit-title">2.3 Protocolo ante Incumplimiento del SLA (Control de Riesgos COBIT)</h3>
+                <p class="audit-quote">
+                    Si un ticket supera el 80% del tiempo acordado o incumple el SLA establecido: (1) <strong>Escalado automático</strong> en GLPI del Técnico en Informática hacia el Ingeniero en Sistemas (Jefe de TI) —y hacia el proveedor externo o ISP si aplica—; (2) <strong>Registro obligatorio</strong> de la causa del retraso dentro de la bitácora del incidente; y (3) <strong>Revisión semanal</strong> entre el Jefe de TI y la Presidencia para mitigar riesgos operativos según los principios de gobierno y control de <strong>COBIT</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 7: 3. ESTADÍSTICAS DE LOS SERVICIOS Y CONTINUIDAD -->
+        <!-- ========================================================= -->
+        <section id="tab-metricas" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="section-title">📊 3. Estadísticas de los Servicios y Continuidad</h2>
+
+            <h3 class="panel-title">3.1 Medidas para Garantizar la Continuidad del Soporte Técnico (10 Medidas)</h3>
+            <div class="table-wrapper" style="margin-bottom: 1.5rem;">
+                <table class="sla-table">
+                    <thead>
+                        <tr>
+                            <th># / Medida</th>
+                            <th>¿Qué problema del caso atiende?</th>
+                            <th>Indicador estadístico</th>
+                            <th>Meta</th>
+                            <th>Fuente de datos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cell-category">1. Censo y etiquetado físico/lógico de activos</td>
+                            <td>Equipos movidos durante cuarentena sin inventario actualizado</td>
+                            <td>% de equipos inventariados y ubicados</td>
+                            <td>100% en 3 meses</td>
+                            <td>Registro de inventario en GLPI</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">2. Sustitución planificada de estaciones críticas</td>
+                            <td>Trabajadores con computadoras obsoletas que frenan su labor</td>
+                            <td>% de equipos obsoletos reemplazados</td>
+                            <td>100% (18/18 equipos) en 4 meses</td>
+                            <td>Actas de asignación y GLPI</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">3. Estandarización de imagen base y bloqueo de permisos</td>
+                            <td>Usuarios realizando actualizaciones y cambios sin control</td>
+                            <td>% de equipos con imagen estándar y perfil sin admin</td>
+                            <td>100% de equipos activos en 2 meses</td>
+                            <td>Auditoría de configuración en GLPI</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">4. Implementación de mesa de ayuda centralizada</td>
+                            <td>Soporte informal por llamadas sin registro ni seguimiento</td>
+                            <td>% de solicitudes registradas como ticket formal</td>
+                            <td>≥ 95% de las solicitudes mensuales</td>
+                            <td>Módulo de Tickets de GLPI</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">5. Despliegue de herramientas de acceso remoto seguro</td>
+                            <td>Dependencia y demoras en soporte a las 3 sedes del interior</td>
+                            <td>% de incidencias remotas resueltas en primer contacto</td>
+                            <td>≥ 80% de casos remotos al mes</td>
+                            <td>Bitácora de soporte remoto y GLPI</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">6. Ejecución de plan de implementación del convenio</td>
+                            <td>Convenio firmado sin plan de recepción, despliegue y soporte</td>
+                            <td>% de equipos nuevos desplegados bajo protocolo</td>
+                            <td>100% de la dotación recibida</td>
+                            <td>Actas de recepción y despliegue TI</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">7. Cronograma de mantenimiento preventivo trimestral</td>
+                            <td>Fallas recurrentes por desgaste físico y falta de limpieza</td>
+                            <td>% de cumplimiento del mantenimiento preventivo</td>
+                            <td>100% de equipos operativos por trimestre</td>
+                            <td>Calendario y órdenes en GLPI</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">8. Control de cumplimiento de tiempos de atención (SLA)</td>
+                            <td>Retrasos en atención a usuarios y paradas operativas en sedes</td>
+                            <td>% de tickets resueltos dentro del SLA acordado</td>
+                            <td>≥ 90% de cumplimiento mensual</td>
+                            <td>Reportes de SLA en GLPI</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">9. Capacitación básica y guías de uso para trabajadores</td>
+                            <td>Frustración de usuarios e improvisación de soluciones técnicas</td>
+                            <td>% de trabajadores capacitados en uso y soporte</td>
+                            <td>≥ 85% del personal en 3 meses</td>
+                            <td>Listas de asistencia y encuestas</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-category">10. Respaldo preventivo de información crítica por puesto</td>
+                            <td>Riesgo de pérdida de datos en equipos con fallas o migración</td>
+                            <td>% de puestos clave con respaldo verificado</td>
+                            <td>100% de puestos críticos al mes</td>
+                            <td>Registro de respaldos del Dpto. TI</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="panel-card" style="margin-bottom: 1.5rem;">
+                <h3 class="panel-title">3.2 Método de Recolección de Datos Estadísticos por Medida</h3>
+                <ul class="collection-list">
+                    <li class="collection-item"><strong>1. Inventario:</strong> El Técnico en Informática realizará el levantamiento físico en la Sede Principal y coordinará por videollamada con los enlaces regionales de las tres sucursales durante el primer trimestre. Cada equipo será etiquetado y cargado en el módulo de activos de <strong>GLPI</strong> para calcular automáticamente el porcentaje inventariado.</li>
+                    <li class="collection-item"><strong>2. Sustitución de obsoletos:</strong> El Ingeniero en Sistemas y el Técnico registrarán cada reemplazo al momento de instalar los equipos del convenio y retirar las estaciones obsoletas. El dato se consolidará mensualmente cruzando las actas firmadas de entrega contra el listado de equipos críticos en <strong>GLPI</strong>.</li>
+                    <li class="collection-item"><strong>3. Estandarización y permisos:</strong> El Técnico verificará durante la configuración inicial y las revisiones trimestrales que cada computador cuente con la imagen institucional y sin permisos de administrador local. El resultado se registrará en la ficha técnica de cada activo dentro de <strong>GLPI</strong> al cierre de cada mes.</li>
+                    <li class="collection-item"><strong>4. Mesa de ayuda centralizada:</strong> Todo requerimiento recibido por teléfono, correo o presencialmente será ingresado por el Técnico o el usuario en el portal de <strong>GLPI</strong> antes de iniciar la atención. Al finalizar el mes, el Jefe de TI comparará los tickets creados frente al registro de llamadas atendidas.</li>
+                    <li class="collection-item"><strong>5. Soporte remoto eficaz:</strong> El Técnico en Informática marcará en <strong>GLPI</strong> cada ticket de las tres sucursales resuelto sin necesidad de traslado físico ni parada prolongada. El indicador se calculará automáticamente al cierre mensual mediante los filtros por sede y tipo de resolución de la herramienta.</li>
+                    <li class="collection-item"><strong>6. Plan del convenio:</strong> El Ingeniero en Sistemas auditará cada lote recibido de la empresa privada verificando pruebas de encendido, configuración estándar y acta de asignación antes de entregarlo al usuario. Los registros se documentarán en una hoja de control vinculada a <strong>GLPI</strong> tras cada jornada de despliegue.</li>
+                    <li class="collection-item"><strong>7. Mantenimiento preventivo:</strong> El Técnico ejecutará las rutinas de limpieza interna, revisión de disco y actualización controlada según el cronograma trimestral por piso y sucursal. Cada intervención quedará cerrada como orden preventiva en <strong>GLPI</strong> para obtener el porcentaje de avance.</li>
+                    <li class="collection-item"><strong>8. Cumplimiento de SLA:</strong> El sistema <strong>GLPI</strong> medirá de forma automática el tiempo transcurrido desde la apertura hasta la resolución de cada incidente según su prioridad. El Ingeniero en Sistemas exportará el reporte estadístico mensual para evaluar desviaciones.</li>
+                    <li class="collection-item"><strong>9. Capacitación de usuarios:</strong> El Departamento de Tecnología realizará charlas breves presenciales y virtuales por sede al entregar los equipos nuevos y habilitar el portal de soporte. La asistencia y comprensión se registrarán mediante formularios digitales de Google Forms al finalizar cada sesión.</li>
+                    <li class="collection-item"><strong>10. Respaldo preventivo:</strong> El Técnico ejecutará copias de seguridad de carpetas institucionales antes de cada migración de equipo y de forma mensual en puestos administrativos clave. El estado de cada respaldo exitoso se anotará en la bitácora de control de <strong>GLPI</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="grid-metricas">
+                <div class="panel-card">
+                    <h3 class="panel-title">3.3 Comparativa Simulada: Situación Actual vs. Meta</h3>
+                    <div class="table-wrapper">
+                        <table class="sla-table">
+                            <thead>
+                                <tr>
+                                    <th>Indicador Clave</th>
+                                    <th>Situación Actual</th>
+                                    <th>Meta Proyectada</th>
+                                    <th>Brecha a Cubrir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="cell-category">Equipos inventariados en GLPI</td>
+                                    <td><span class="priority-critical">0%</span></td>
+                                    <td><span class="kpi-target-ok">100%</span></td>
+                                    <td>+100% (40 equipos)</td>
+                                </tr>
+                                <tr>
+                                    <td class="cell-category">Equipos obsoletos renovados</td>
+                                    <td><span class="priority-critical">0%</span></td>
+                                    <td><span class="kpi-target-ok">100%</span></td>
+                                    <td>+100% (18 equipos)</td>
+                                </tr>
+                                <tr>
+                                    <td class="cell-category">Equipos con software estandarizado</td>
+                                    <td><span class="priority-critical">25%</span></td>
+                                    <td><span class="kpi-target-ok">100%</span></td>
+                                    <td>+75%</td>
+                                </tr>
+                                <tr>
+                                    <td class="cell-category">Tickets registrados formalmente</td>
+                                    <td><span class="priority-critical">10%</span></td>
+                                    <td><span class="kpi-target-ok">95%</span></td>
+                                    <td>+85%</td>
+                                </tr>
+                                <tr>
+                                    <td class="cell-category">Incidencias remotas resueltas</td>
+                                    <td><span class="priority-low">45%</span></td>
+                                    <td><span class="kpi-target-ok">80%</span></td>
+                                    <td>+35%</td>
+                                </tr>
+                                <tr>
+                                    <td class="cell-category">Cumplimiento de SLA mensual</td>
+                                    <td><span class="priority-critical">35%</span></td>
+                                    <td><span class="kpi-target-ok">90%</span></td>
+                                    <td>+55%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel-card">
+                    <h3 class="panel-title">Gráfica Comparativa (Actual vs. Meta)</h3>
+                    <p class="dashboard-desc" style="margin-bottom: 1rem;">Datos simulados justificados en el diagnóstico inicial frente a las metas trimestrales:</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.9rem; text-align: left;">
+                        <div>
+                            <small><strong>Equipos Inventariados:</strong> Actual 0% → Meta 100%</small>
+                            <div style="background:#e2e8f0; border-radius:6px; height:12px; overflow:hidden;">
+                                <div style="width:100%; background:#10b981; height:100%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <small><strong>Software Estandarizado:</strong> Actual 25% → Meta 100%</small>
+                            <div style="background:#e2e8f0; border-radius:6px; height:12px; overflow:hidden; display:flex;">
+                                <div style="width:25%; background:#ef4444; height:100%;"></div>
+                                <div style="width:75%; background:#10b981; height:100%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <small><strong>Tickets Registrados en GLPI:</strong> Actual 10% → Meta 95%</small>
+                            <div style="background:#e2e8f0; border-radius:6px; height:12px; overflow:hidden; display:flex;">
+                                <div style="width:10%; background:#ef4444; height:100%;"></div>
+                                <div style="width:85%; background:#10b981; height:100%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <small><strong>Resolución Remota (Sucursales):</strong> Actual 45% → Meta 80%</small>
+                            <div style="background:#e2e8f0; border-radius:6px; height:12px; overflow:hidden; display:flex;">
+                                <div style="width:45%; background:#f59e0b; height:100%;"></div>
+                                <div style="width:35%; background:#10b981; height:100%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <small><strong>Cumplimiento SLA Mensual:</strong> Actual 35% → Meta 90%</small>
+                            <div style="background:#e2e8f0; border-radius:6px; height:12px; overflow:hidden; display:flex;">
+                                <div style="width:35%; background:#ef4444; height:100%;"></div>
+                                <div style="width:55%; background:#10b981; height:100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="sla-note" style="margin-top: 1rem;">
+                        📎 <a href="#ENLACE-DRIVE-ESTADISTICAS" target="_blank" rel="noopener noreferrer">Ver hoja de cálculo y gráficos completos en Google Drive</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 8: 4. MARCO TEÓRICO Y REPOSITORIO DRIVE           -->
+        <!-- ========================================================= -->
+        <section id="tab-marco" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="section-title">🎓 4. Marco Teórico del Soporte Técnico (Infografía de 3 Capas)</h2>
+
+            <div class="grid-marco">
+                <div class="marco-card marco-card-blue">
+                    <h4 class="marco-card-title">Capa 1 — Definición y Fundamentos</h4>
+                    <p class="marco-card-text">
+                        <strong>ITIL 4:</strong> Marco de mejores prácticas para la gestión de servicios de TI centrado en crear valor mediante flujos eficientes de soporte, incidentes y cambios.<br><br>
+                        <strong>COBIT:</strong> Marco de gobierno y gestión empresarial de TI orientado al control de riesgos, cumplimiento normativo y alineación con los objetivos institucionales.<br><br>
+                        <strong>ISO/IEC 20000:</strong> Norma internacional certificable que establece los requisitos de calidad y evidencia documental para un Sistema de Gestión de Servicios de TI (SGSTI).
+                    </p>
+                </div>
+
+                <div class="marco-card marco-card-emerald">
+                    <h4 class="marco-card-title">Capa 2 — Aplicación Concreta al Caso</h4>
+                    <p class="marco-card-text">
+                        <strong>ITIL 4 en la Fundación:</strong> Clasificación de incidentes vs. problemas (equipos obsoletos) y atención escalonada (Técnico Nivel 1 → Ing. Sistemas Nivel 2) mediante mesa de ayuda GLPI.<br><br>
+                        <strong>COBIT en la Fundación:</strong> Controles para prohibir instalaciones de software sin permiso, actas de traslado de equipos tras la cuarentena y revisión de riesgos por incumplimiento de SLA.<br><br>
+                        <strong>ISO/IEC 20000 en la Fundación:</strong> Documentación formal de los SLA por categoría, registros auditables de mantenimiento y actas de entrega del convenio de dotación.
+                    </p>
+                </div>
+
+                <div class="marco-card marco-card-purple">
+                    <h4 class="marco-card-title">Capa 3 — Relación entre los Tres Marcos</h4>
+                    <p class="marco-card-text">
+                        <strong>COBIT</strong> define el gobierno, los controles y las reglas sobre qué debe hacerse para mitigar riesgos en la Fundación; <strong>ITIL 4</strong> aporta las prácticas operativas de cómo ejecutar el soporte día a día; e <strong>ISO/IEC 20000</strong> estandariza, documenta y audita que todo el servicio se cumpla con calidad sostenible.
+                    </p>
+                </div>
+            </div>
+
+            <div class="audit-box" style="margin-top: 1.5rem; margin-bottom: 2.5rem;">
+                <h3 class="audit-title">Infografía Visual y Evidencia en Google Drive</h3>
+                <p class="audit-quote">
+                    📎 <a href="#ENLACE-DRIVE-INFOGRAFIA" target="_blank" rel="noopener noreferrer">Descargar Infografía de 3 Capas (ITIL 4, COBIT e ISO/IEC 20000) en Google Drive</a>
+                </p>
+            </div>
+
+            <h2 class="section-title">📂 Repositorio de Evidencias (Drive) y Sesiones Didácticas</h2>
+            <div class="grid-marco">
+                <div class="marco-card marco-card-blue">
+                    <h4 class="marco-card-title">Sesión Didáctica 1 (Activa)</h4>
+                    <p class="marco-card-text">El STU, habilidades técnicas y blandas, decálogo, clasificación ITIL, matrices SLA, indicadores y marco teórico.<br><br><a href="#ENLACE-DRIVE-SESION-1" target="_blank" rel="noopener noreferrer">Abrir Carpeta Sesión 1 en Drive →</a></p>
+                </div>
+                <div class="marco-card marco-card-emerald">
+                    <h4 class="marco-card-title">Sesión Didáctica 2 (Próximamente)</h4>
+                    <p class="marco-card-text">Formulación del Proyecto Sociotecnológico para la implementación integral del convenio de dotación tecnológica.<br><br><a href="#ENLACE-DRIVE-SESION-2" target="_blank" rel="noopener noreferrer">Carpeta Sesión 2 en Drive →</a></p>
+                </div>
+                <div class="marco-card marco-card-purple">
+                    <h4 class="marco-card-title">Sesión Didáctica 3 (Próximamente)</h4>
+                    <p class="marco-card-text">Diseño del Enfoque de Marco Lógico (EML): análisis de involucrados, árboles y Matriz de Marco Lógico.<br><br><a href="#ENLACE-DRIVE-SESION-3" target="_blank" rel="noopener noreferrer">Carpeta Sesión 3 en Drive →</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p class="footer-copy">© 2026 Proyecto Sociotecnológico I — Fundación Nacional por el Turismo Social en Venezuela.</p>
+        <p class="footer-copy"><strong>Universidad Nacional Experimental de las Telecomunicaciones e Informática (UNETI)</strong></p>
+        <p class="footer-sub"><strong>Autores:</strong> Keimer Vergara V-29.756.427 — Rubén Guerrero V-29.611.472 — Jennifer Moreno V-27.080.263</p>
+    </footer>
+
+</body>
+</html>
